@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        AND: đáp ứng tất cả các điều kiện
+            VD: SELECT * from customers WHERE city='New York' AND company='Company D';
+        => Lấy ra tất cả thông tin của khách hàng đến từ 'New York' và công ty D
+        OR: Đáp ứng 1 trong số các điều kiện
+            VD: SELECT * from customers WHERE city='Miami' OR last_name = 'Lee';
+        => Lấy ra tất cả thông tin của khách hàng đến từ 'Miami' hoặc có tên là Lee
+        NOT: Phủ định hoàn toàn các điều kiện
+            VD: SELECT * from customers WHERE NOT city='Miami';
+        => Lấy ra tất cả thông tin của khách hàng không đến từ 'Miami'
+    </pre>
+</body>

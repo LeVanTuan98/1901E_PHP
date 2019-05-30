@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        ORDER BY: Sắp xếp
+        + ASC : Sắp xếp tăng dần
+        + DESC : Sắp xếp giảm dần
+        VD:
+        SELECT * from customers  BY id ASC; => Sắp xếp theo thứ tự ID tăng dần
+        SELECT * from customers  BY id DESC; => Sắp xếp theo thứ tự ID giảm dần
+        // Sắp xếp nhiều cột
+        SELECT id, city, job_title from customers ORDER BY city ASC , job_title DESC;
+        => Sắp xếp city theo thứ tự tăng dần, job_title theo thứ tự giảm dần
+
+    </pre>
+</body>
+</html>
