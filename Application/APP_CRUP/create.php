@@ -7,9 +7,26 @@
 </head>
 <body>
 <?php
-    echo "<pre>";
-    echo print_r($_POST);
-    echo "</pre>";
+    include_once "conflig.php";
+    if (isset($_POST['name']) && isset($_POST['address']) && isset($_POST['salary'])){
+        if (!empty($_POST['name']) && !empty($_POST['address']) && !empty($_POST['salary'])) {
+            $name = $_POST['name'];
+            $address = $_POST['address'];
+            $salary = $_POST['salary'];
+
+            $sqlInsert = "INSERT INTO employees (name, address, salary) VALUE ('$name','$address',$salary)";
+            if (mysqli_query($connection, $sqlInsert)) {
+                echo "New record created successfully";
+                /**
+                 * hàm header được dùng để chuyển hướng url
+                 */
+                header('location: index.php');
+                exit;
+            } else {
+                echo "Error: " . $sqlInsert . "<br>" . mysqli_error($connection);
+            }
+        }
+    }
 ?>
     <div class="container">
         <div class="row">
